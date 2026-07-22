@@ -52,7 +52,7 @@
 50,bidSize,0
 51,askSize,0
 52,marketCap,673209516032
-53,nonDilutedMarketCap,684862993501
+53,nonDilutedMarketCap,685135695179
 54,fiftyTwoWeekLow,1391.2
 55,fiftyTwoWeekHigh,1986.1
 56,allTimeHigh,2343.65
@@ -116,39 +116,39 @@
 114,quoteSourceName,Delayed Quote
 115,triggerable,True
 116,customPriceAlertConfidence,HIGH
-117,marketState,POSTPOST
-118,corporateActions,"[{'header': 'Dividend', 'message': 'OBEROIRLTY.NS announced a cash dividend of INR 2.00 with an ex-date of Jul. 23, 2026', 'meta': {'eventType': 'DIVIDEND', 'dateEpochMs': 1784745000000, 'amount': '2.00'}}]"
-119,regularMarketTime,1784714391
-120,regularMarketChange,-33.30005
-121,regularMarketDayRange,1838.4 - 1892.0
-122,hasPrePostMarketData,False
-123,firstTradeDateMilliseconds,1287546300000
-124,fullExchangeName,NSE
-125,averageDailyVolume3Month,533285
-126,fiftyTwoWeekLowChange,460.30005
-127,fiftyTwoWeekLowChangePercent,0.33086547
-128,fiftyTwoWeekRange,1391.2 - 1986.1
-129,fiftyTwoWeekHighChange,-134.59998
-130,fiftyTwoWeekHighChangePercent,-0.067770995
-131,fiftyTwoWeekChangePercent,6.509948
-132,earningsTimestamp,1784282400
-133,earningsTimestampStart,1791972000
-134,earningsTimestampEnd,1791972000
-135,earningsCallTimestampStart,1784543400
-136,earningsCallTimestampEnd,1784543400
-137,isEarningsDateEstimate,False
-138,epsTrailingTwelveMonths,72.38
-139,epsForward,106.64664
-140,epsCurrentYear,89.15085
-141,priceEpsCurrentYear,20.76817
-142,fiftyDayAverageChange,115.62805
-143,fiftyDayAverageChangePercent,0.06661093
-144,twoHundredDayAverageChange,206.77246
-145,twoHundredDayAverageChangePercent,0.12571837
-146,sourceInterval,15
-147,exchangeDataDelayedBy,15
-148,averageAnalystRating,1.9 - Buy
-149,cryptoTradeable,False
+117,hasPrePostMarketData,False
+118,firstTradeDateMilliseconds,1287546300000
+119,regularMarketChange,-33.30005
+120,regularMarketDayRange,1838.4 - 1892.0
+121,fullExchangeName,NSE
+122,averageDailyVolume3Month,533285
+123,fiftyTwoWeekLowChange,460.30005
+124,fiftyTwoWeekLowChangePercent,0.33086547
+125,fiftyTwoWeekRange,1391.2 - 1986.1
+126,fiftyTwoWeekHighChange,-134.59998
+127,fiftyTwoWeekHighChangePercent,-0.067770995
+128,fiftyTwoWeekChangePercent,6.509948
+129,earningsTimestamp,1784282400
+130,earningsTimestampStart,1791972000
+131,earningsTimestampEnd,1791972000
+132,earningsCallTimestampStart,1784543400
+133,earningsCallTimestampEnd,1784543400
+134,isEarningsDateEstimate,False
+135,epsTrailingTwelveMonths,72.38
+136,epsForward,106.64664
+137,epsCurrentYear,89.15085
+138,priceEpsCurrentYear,20.76817
+139,marketState,POSTPOST
+140,fiftyDayAverageChange,115.62805
+141,fiftyDayAverageChangePercent,0.06661093
+142,twoHundredDayAverageChange,206.77246
+143,twoHundredDayAverageChangePercent,0.12571837
+144,sourceInterval,15
+145,exchangeDataDelayedBy,15
+146,averageAnalystRating,1.9 - Buy
+147,cryptoTradeable,False
+148,corporateActions,"[{'header': 'Dividend', 'message': 'OBEROIRLTY.NS announced a cash dividend of INR 2.00 with an ex-date of Jul. 23, 2026', 'meta': {'eventType': 'DIVIDEND', 'dateEpochMs': 1784745000000, 'amount': '2.00'}}]"
+149,regularMarketTime,1784714391
 150,shortName,OBEROI REALTY LIMITED
 151,longName,Oberoi Realty Limited
 152,exchange,NSI

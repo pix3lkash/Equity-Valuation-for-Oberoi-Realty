@@ -383,6 +383,14 @@ def create_report():
         row
     )
 
+    insert_chart(
+        ws,
+        CHARTS / "price_history.png",
+        f"A{row}"
+    )
+
+    row += 22
+
     # ===================================================
     # Price Prediction
     # ===================================================
@@ -398,6 +406,14 @@ def create_report():
     insert_chart(
         ws,
         CHARTS / "predicted_prices.png",
+        f"A{row}"
+    )
+
+    row += 22
+
+    insert_chart(
+        ws,
+        CHARTS / "technical_indicators.png",
         f"A{row}"
     )
 
@@ -480,9 +496,32 @@ def create_report():
     CHARTS / "valuation_comparison.png",
     f"A{row}"
 )
+    
+    row += 22
+
+    insert_chart(
+        ws,
+        CHARTS / "dcf_waterfall.png",
+        f"A{row}"
+)
 
     row += 22
 
+    insert_chart(
+        ws,
+        CHARTS / "revenue_vs_profit.png",
+        f"A{row}"
+)
+
+    row += 22
+
+    insert_chart(
+        ws,
+        CHARTS / "balance_sheet.png",
+        f"A{row}"
+)
+
+    row += 22
     # ===================================================
     # Final Recommendation
     # ===================================================
