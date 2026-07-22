@@ -1,4 +1,4 @@
-# Oberoi Realty Stock Valuation & Financial Analysis
+# Oberoi Realty Equity Valuation & Financial Analysis
 
 A complete Python-based financial analysis pipeline that automatically downloads financial data from Yahoo Finance, performs ratio analysis, technical analysis, intrinsic valuation, and generates a professional Excel report.
 
@@ -48,7 +48,6 @@ Technical Indicators:
 - Bollinger Bands
 - Daily Returns
 - Volatility
-
 -Discounted Cash Flow (DCF)
 -Dividend Discount Model (DDM)
 -CAPM Cost of Equity
@@ -155,10 +154,12 @@ Libraries:
 - matplotlib
 - scikit-learn
 - openpyxl
+- yfinance
+- ta
 
 Finance Concepts:
-- DCF
 - CAPM
+- Discounted Cash Flow
 - Dividend Discount Model
 - Financial Ratio Analysis
 - Technical Indicators
@@ -213,7 +214,7 @@ Latest Financial Highlights
 | Current Ratio | 3.99 |
 | ROE | 13.99% |
 | ROA | 9.90% |
-| DCF Intrinsic Value | ₹1024/share |
+| DCF Intrinsic Value | ₹436.01/share |
 | Current Market Price | ~₹1883/share |
 
 ---
@@ -223,7 +224,7 @@ Latest Financial Highlights
 The valuation uses the following assumptions:
 
 - Tax Rate = 25%
-- Revenue Growth = 8%
+- FCFF Growth Rate (Years 1–5): 8%
 - Terminal Growth = 4%
 - WACC = 11%
 - Cost of Equity = CAPM
@@ -248,28 +249,17 @@ Limitations include:
 # How to Run
 
 Clone the repository
-
-```bash
 git clone https://github.com/yourusername/Oberoi-Realty-Valuation.git
-```
 
 Install dependencies
 
-```bash
 pip install -r requirements.txt
-```
 
 Run
 
-```bash
 python main.py
-```
 
-The generated report will be available in
-
-```
-report/Final_Report.xlsx
-```
+The generated report will be available in report/Final_Report.xlsx
 
 ---
 
@@ -283,21 +273,5 @@ report/Final_Report.xlsx
 - Peer Company Analysis
 - LSTM-based Price Prediction
 - Interactive Visualizations
-
----
-
-# Resume Highlights
-
-This project demonstrates experience in
-
-- Financial Modeling
-- Equity Valuation
-- Python Automation
-- Data Analysis
-- Corporate Finance
-- Financial Statement Analysis
-- Excel Report Automation
-- Machine Learning
-- Time Series Analysis
 
 ---
