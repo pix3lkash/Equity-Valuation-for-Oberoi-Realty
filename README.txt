@@ -249,6 +249,7 @@ Limitations include:
 # How to Run
 
 Clone the repository
+
 git clone https://github.com/yourusername/Oberoi-Realty-Valuation.git
 
 Install dependencies
