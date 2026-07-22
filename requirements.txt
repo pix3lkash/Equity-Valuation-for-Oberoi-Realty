@@ -1,0 +1,9 @@
+yfinance
+pandas
+numpy
+matplotlib
+openpyxl
+scipy
+python-docx
+xlsxwriter
+ta
