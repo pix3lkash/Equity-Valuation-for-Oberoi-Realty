@@ -8,6 +8,7 @@ from src.capm import calculate_capm
 from src.prediction import predict_prices
 from src.report import create_report
 from src.recommendations import generate_recommendation
+from src.charts import generate_charts
 
 
 def main():
@@ -31,11 +32,11 @@ def main():
     print("\nSTEP 5 : DCF Valuation")
     calculate_dcf()
 
-    print("\nSTEP 6 : Dividend Discount Model")
-    calculate_ddm()
-
-    print("\nSTEP 7 : CAPM")
+    print("\nSTEP 6 : CAPM")
     calculate_capm()
+
+    print("\nSTEP 7 : Dividend Discount Model")
+    calculate_ddm()    
 
     print("\nSTEP 8 : Price Prediction")
     predict_prices()
@@ -43,7 +44,10 @@ def main():
     print("\nSTEP 9 : Recommendation")
     generate_recommendation()
 
-    print("\nSTEP 10 : Creating Report")
+    print("\nSTEP 10 : Generating Charts")
+    generate_charts()
+
+    print("\nSTEP 11 : Creating Report")
     create_report()
 
     print("\n" + "=" * 70)

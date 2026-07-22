@@ -6,7 +6,6 @@ Project: Oberoi Realty Valuation
 """
 
 import pandas as pd
-import numpy as np
 from config import *
 
 
@@ -42,10 +41,21 @@ def calculate_dcf():
     ebit = financial.loc["EBIT", latest]
     depreciation = financial.loc["Depreciation", latest]
     capex = financial.loc["CapEx", latest]
-    working_capital = financial.loc["Working Capital", latest]
+    working_capital_current = financial.loc["Working Capital", latest]
+
+    previous_year = financial.columns[-2]
+
+    working_capital_previous = financial.loc[
+        "Working Capital",
+        previous_year
+]
+
+    delta_working_capital = (
+        working_capital_current - working_capital_previous
+)
+
     cash = financial.loc["Cash", latest]
     debt = financial.loc["Total Debt", latest]
-    equity = financial.loc["Equity", latest]
 
     # -------------------------------------------------
     # Assumptions
@@ -70,10 +80,7 @@ def calculate_dcf():
     ].iloc[0]
 )
 
-    print(f"Shares Outstanding: {SHARES_OUTSTANDING:,.0f}")
-
-    print(f"Shares Outstanding: {SHARES_OUTSTANDING:,.0f}")
-    
+    print(f"Shares Outstanding: {SHARES_OUTSTANDING:,.0f}")    
 
     # -------------------------------------------------
     # NOPAT
@@ -89,6 +96,7 @@ def calculate_dcf():
         nopat
         + depreciation
         - abs(capex)
+        - delta_working_capital
     )
 
     # -------------------------------------------------

@@ -3,7 +3,5 @@ pandas
 numpy
 matplotlib
 openpyxl
-scipy
-python-docx
-xlsxwriter
 ta
+scikit-learn

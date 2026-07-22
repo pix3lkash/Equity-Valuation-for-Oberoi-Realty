@@ -1,9 +1,9 @@
 Method,Actual,Benchmark,Signal,Reason
-DCF,1024.14,1884.8,SELL,Intrinsic Value vs Market Price
-DDM,77.43,1884.8,SELL,Dividend Discount Model
-P/E,26.07,35.0,BUY,Compared with Sector Average
-P/B,3.82,5.0,BUY,Compared with Sector Average
-P/S,11.4,12.0,HOLD,Compared with Sector Average
+DCF,436.01,1851.5,SELL,Intrinsic Value vs Market Price
+DDM,77.43,1851.5,SELL,Dividend Discount Model
+P/E,25.58,35.0,BUY,Compared with Sector Average
+P/B,3.76,5.0,BUY,Compared with Sector Average
+P/S,11.2,12.0,HOLD,Compared with Sector Average
 CAPM,8.8,10% - 15%,BUY,Cost of Equity
-Technical,59.85,RSI (30 / 70),HOLD,Latest RSI Signal
+Technical,53.85,RSI (30 / 70),HOLD,Latest RSI Signal
 OVERALL,"BUY=3, HOLD=2, SELL=2",-,BUY,Majority Vote Across All Methods

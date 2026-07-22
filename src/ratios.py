@@ -12,6 +12,7 @@ Financial_Ratios.csv
 
 import pandas as pd
 import numpy as np
+from sklearn import metrics
 from config import *
 
 
@@ -59,18 +60,15 @@ def process_ratios():
     current_liabilities = pd.to_numeric(financial.loc["Current Liabilities", latest], errors="coerce")
     operating_cf = pd.to_numeric(financial.loc["Operating Cash Flow", latest], errors="coerce")
 
-    print("Latest year:", latest)
-    print("Operating CF:", operating_cf)
-    print("Current Liabilities:", current_liabilities)
+
     # --------------------------------------------
     # Company Metrics
     # --------------------------------------------
 
-    pe = get_metric(metrics, "Trailing PE")
-    pb = get_metric(metrics, "Price to Book")
-    eps = get_metric(metrics, "Trailing EPS")
+    pe = pd.to_numeric(get_metric(metrics, "Trailing PE"), errors="coerce")
+    pb = pd.to_numeric(get_metric(metrics, "Price to Book"), errors="coerce")
+    eps = pd.to_numeric(get_metric(metrics, "Trailing EPS"), errors="coerce")
     market_cap = pd.to_numeric(get_metric(metrics, "Market Cap"), errors="coerce")
-    shares = pd.to_numeric(get_metric(metrics, "Shares Outstanding"), errors="coerce")
     beta = pd.to_numeric(get_metric(metrics, "Beta"), errors="coerce")
 
     # --------------------------------------------
@@ -99,17 +97,67 @@ def process_ratios():
     )
 
     # --------------------------------------------
-    # Placeholder values
+    # Price Ratios
     # --------------------------------------------
 
     ps = np.nan
     peg = np.nan
 
-    if market_cap and revenue:
+    if pd.notna(market_cap) and pd.notna(revenue) and revenue != 0:
         ps = market_cap / revenue
 
-    # PEG requires earnings growth
-    # We will calculate it later
+# --------------------------------------------
+# PEG Ratio
+# --------------------------------------------
+
+    company_info = pd.read_csv(
+        RAW_DATA / "Company_Info.csv"
+    )
+
+    shares_outstanding = float(
+        company_info.loc[
+            company_info["Field"] == "sharesOutstanding",
+            "Value"
+        ].iloc[0]
+    )
+
+    # Historical Net Income
+    net_income_history = pd.to_numeric(
+        financial.loc["Net Income"],
+        errors="coerce"
+    )
+
+    # Convert to EPS
+    eps_history = net_income_history / shares_outstanding
+
+    # Remove missing years
+    eps_history = eps_history.dropna()
+
+    # Sort oldest -> newest
+    eps_history = eps_history.sort_index()
+
+    if len(eps_history) >= 2:
+
+        eps_start = eps_history.iloc[0]
+        eps_end = eps_history.iloc[-1]
+
+        years = len(eps_history) - 1
+
+        eps_growth = (
+            (eps_end / eps_start) ** (1 / years) - 1
+        ) * 100
+
+        if (
+            pd.notna(pe)
+            and pe > 0
+            and pd.notna(eps_growth)
+            and eps_growth > 0
+        ):
+            peg = pe / eps_growth
+
+        print("\nPEG Calculation")
+        print("EPS Growth (%):", round(eps_growth, 2))
+        print("PEG:", peg)
 
     # --------------------------------------------
     # Output Table
