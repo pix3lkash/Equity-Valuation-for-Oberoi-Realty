@@ -12,7 +12,6 @@ Financial_Ratios.csv
 
 import pandas as pd
 import numpy as np
-from sklearn import metrics
 from config import *
 
 

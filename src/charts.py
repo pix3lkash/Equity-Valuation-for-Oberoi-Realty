@@ -24,7 +24,7 @@ def generate_charts():
 
     prices["Date"] = pd.to_datetime(
         prices["Date"],
-        dayfirst=True
+        format="%Y-%m-%d"
     )
 
     plt.figure(figsize=(10, 5))
@@ -104,7 +104,7 @@ def generate_charts():
 
     tech["Date"] = pd.to_datetime(
         tech["Date"],
-        dayfirst=True
+        format="%Y-%m-%d"
     )
 
     plt.figure(figsize=(12, 5))

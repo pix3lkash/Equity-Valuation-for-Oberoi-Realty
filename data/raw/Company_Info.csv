@@ -44,9 +44,9 @@
 42,forwardPE,17.361073
 43,volume,291318
 44,regularMarketVolume,291318
-45,averageVolume,537792
-46,averageVolume10days,691723
-47,averageDailyVolume10Day,691723
+45,averageVolume,533285
+46,averageVolume10days,618499
+47,averageDailyVolume10Day,618499
 48,bid,0.0
 49,ask,0.0
 50,bidSize,0
@@ -58,8 +58,8 @@
 56,allTimeHigh,2343.65
 57,allTimeLow,153.15
 58,priceToSalesTrailing12Months,10.648004
-59,fiftyDayAverage,1730.71
-60,twoHundredDayAverage,1643.2605
+59,fiftyDayAverage,1735.872
+60,twoHundredDayAverage,1644.7275
 61,trailingAnnualDividendRate,8.0
 62,trailingAnnualDividendYield,0.004244482
 63,currency,INR
@@ -82,8 +82,8 @@
 80,forwardEps,106.64664
 81,enterpriseToRevenue,10.766
 82,enterpriseToEbitda,19.031
-83,52WeekChange,0.030938506
-84,SandP52WeekChange,0.19011927
+83,52WeekChange,0.06509948
+84,SandP52WeekChange,0.18089426
 85,lastDividendValue,2.0
 86,lastDividendDate,1784764800
 87,quoteType,EQUITY
@@ -124,13 +124,13 @@
 122,hasPrePostMarketData,False
 123,firstTradeDateMilliseconds,1287546300000
 124,fullExchangeName,NSE
-125,averageDailyVolume3Month,537792
+125,averageDailyVolume3Month,533285
 126,fiftyTwoWeekLowChange,460.30005
 127,fiftyTwoWeekLowChangePercent,0.33086547
 128,fiftyTwoWeekRange,1391.2 - 1986.1
 129,fiftyTwoWeekHighChange,-134.59998
 130,fiftyTwoWeekHighChangePercent,-0.067770995
-131,fiftyTwoWeekChangePercent,3.0938506
+131,fiftyTwoWeekChangePercent,6.509948
 132,earningsTimestamp,1784282400
 133,earningsTimestampStart,1791972000
 134,earningsTimestampEnd,1791972000
@@ -141,10 +141,10 @@
 139,epsForward,106.64664
 140,epsCurrentYear,89.15085
 141,priceEpsCurrentYear,20.76817
-142,fiftyDayAverageChange,120.79004
-143,fiftyDayAverageChangePercent,0.06979219
-144,twoHundredDayAverageChange,208.2395
-145,twoHundredDayAverageChangePercent,0.12672336
+142,fiftyDayAverageChange,115.62805
+143,fiftyDayAverageChangePercent,0.06661093
+144,twoHundredDayAverageChange,206.77246
+145,twoHundredDayAverageChangePercent,0.12571837
 146,sourceInterval,15
 147,exchangeDataDelayedBy,15
 148,averageAnalystRating,1.9 - Buy
